@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>双平台资源大合集 - 夸克/百度网盘</title>
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --background: #f8fafc;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--background);
+            margin: 0;
+            padding: 20px;
+            color: #1e293b;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .platform-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .platform-tab {
+            padding: 12px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            background: #e0e7ff;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .platform-tab.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: #4338ca;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+            color: white;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+
+        .search-box {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .resource-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+            position: relative;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-2px);
+        }
+
+        /* 分类标签 */
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+        .tool { background: #bfdbfe; color: #1e3a8a; }
+        .media { background: #fde68a; color: #78350f; }
+        .game { background: #bbf7d0; color: #166534; }
+        .system { background: #ddd6fe; color: #4338ca; }
+        .office { background: #fecaca; color: #7f1d1d; }
+
+        /* 热度系统 */
+        .hot-indicator {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            display: flex;
+            gap: 3px;
+        }
+        .heat-level-1 { color: #f59e0b; }
+        .heat-level-2 { color: #f97316; }
+        .heat-level-3 { color: #ef4444; }
+
+        .views-count {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            font-size: 12px;
+            color: #64748b;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .trending-tag {
+            background: #ef4444;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 12px;
+            position: absolute;
+            top: -8px;
+            right: -8px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: opacity 0.2s;
+        }
+
+        @media (max-width: 600px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            .platform-tabs {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔗 双平台资源合集</h1>
+            <p>已收录 <span id="count">0</span> 个精选资源</p>
+            <input type="text" 
+                   class="search-box" 
+                   placeholder="输入关键词搜索资源..." 
+                   id="searchInput">
+        </div>
+
+        <div class="platform-tabs">
+            <div class="platform-tab active" data-source="all">全部资源</div>
+            <div class="platform-tab" data-source="quark">夸克网盘</div>
+            <div class="platform-tab" data-source="baidu">百度网盘</div>
+        </div>
+
+        <div class="grid" id="resourceGrid"></div>
+    </div>
+
+<script>
+const resources = [
+    // ================= 夸克网盘资源 =================
+    {
+        title: "夸克软件合集-3月",
+        description: "2024最新破解软件合集",
+        type: "tool",
+        size: "15.3GB",
+        source: "quark",
+        url: "https://pan.quark.cn/s/0490fbc3a871",
+        heat: 3,
+        views: 2845,
+        trending: true
+    },
+
+    // ================= 百度网盘完整资源 =================
+    {
+        title: "Speedtest测速工具",
+        description: "专业网络测速软件",
+        type: "tool",
+        size: "85MB",
+        source: "baidu",
+        url: "https://pan.baidu.com/s/1gnLXewUqMBBoV3iNiKfWTA?pwd=2amh",
+        heat: 2,
+        views: 1562
+    },
+    {
+        title: "AdGuard广告拦截器",
+        description: "全网广告拦截工具",
+        type: "tool", 
+        size: "62MB",
+        source: "baidu",
+        url: "https://pan.baidu.com/s/1oeX2jX8wy6zq4ujhUBmzoA?pwd=2amh",
+        heat: 3,
+        views: 2893
+    },
+    {
+        title: "BD-SJ10168",
+        description: "实用工具合集",
+        type: "tool",
+        size: "1.2GB",
+        source: "baidu",
+        url: "https://pan.baidu.com/s/1mGFScw938b4rd7VlbOoCvA?pwd=2amh",
+        heat: 1,
+        views: 876
+    },
+    {
+        title: "笔趣阁",
+        description: "小说阅读资源合集",
+        type: "reader",
+        size: "650MB", 
+        source: "baidu",
+        url: "https://pan.baidu.com/s/1gs6KyYV8hyzmNl36_6K-pQ?pwd=2amh",
+        heat: 2,
+        views: 2345
+    },
+    {
+        title: "BD-SJ10475",
+        description: "系统优化工具包",
+        type: "system",
+        size: "890MB",
+        source: "baidu",
+        url: "https://pan.baidu.com/s/1RYesg5KV0NwoEdbcNCjB5Q?pwd=2amh",
+        heat: 2,
+        views: 1678
+    },
+    {
+        title: "七猫小说",
+        description: "正版免费小说阅读",
+        type: "reader",
+        size: "78MB",
+        source: "baidu",
+        url: "https://pan.baidu.com/s/1mn8Kemjx6nkFaE-zyRtGdw?pwd=2amh",
+        heat: 3,
+        views: 3456
+    },
+    {
+        title: "万兴PDF专家",
+        description: "专业PDF处理工具",
+        type: "office",
+        size: "356MB",
+        source: "baidu",
+        url: "https://pan.baidu.com/s/1YWqFets8a0t7ZBmLo3u1kw?pwd=2amh",
+        heat: 2,
+        views: 1987
+    },
+    {
+        title: "yandex浏览器", 
+        description: "俄罗斯定制版浏览器",
+        type: "tool",
+        size: "92MB",
+        source: "baidu",
+        url: "https://pan.baidu.com/s/1cutI5la7AXyj8LK5QC02ZQ?pwd=2amh",
+        heat: 1,
+        views: 1324
+    },
+    {
+        title: "hwsmw",
+        description: "系统维护工具",
+        type: "system",
+        size: "45MB",
+        source: "baidu",
+        url: "https://pan.baidu.com/s/1zdSwXejGTaiKOUYluKLTtw?pwd=2amh",
+        heat: 1,
+        views: 987
+    },
+    {
+        title: "POTPLAYER播放器",
+        description: "4K高清播放器",
+        type: "media",
+        size: "45MB",
+        source: "baidu",
+        url: "https://pan.baidu.com/s/19R50iPPP-FuHeba8owPjzQ?pwd=2amh",
+        heat: 3,
+        views: 2876,
+        trending: true
+    },
+    {
+        title: "格式工厂", 
+        description: "万能格式转换工具",
+        type: "media",
+        size: "780MB",
+        source: "baidu",
+        url: "https://pan.baidu.com/s/1Jgj94HDVgPJ97rOheMU2Cw?pwd=2amh",
+        heat: 3,
+        views: 3245,
+        trending: true
+    },
+    {
+        title: "悦牍阅读器",
+        description: "内置海量书源",
+        type: "reader",
+        size: "32MB",
+        source: "baidu",
+        url: "https://pan.baidu.com/s/1fTuHGAN9Je2vRORhWZ0pLg?pwd=2amh",
+        heat: 2,
+        views: 2134
+    },
+    {
+        title: "MT管理器", 
+        description: "安卓逆向工具",
+        type: "tool",
+        size: "18MB",
+        source: "baidu",
+        url: "https://pan.baidu.com/s/1WuUHfWBTKOJ3jkWAugQo6w?pwd=2amh",
+        heat: 3,
+        views: 3876
+    },
+    {
+        title: "snipaste截图",
+        description: "专业截图工具",
+        type: "tool",
+        size: "15MB",
+        source: "baidu",
+        url: "https://pan.baidu.com/s/1yJfUAG6sP_6XxKOJXpyjyg?pwd=2amh",
+        heat: 2,
+        views: 2765
+    },
+    {
+        title: "litiaotiao",
+        description: "系统跳线工具",
+        type: "system",
+        size: "8MB",
+        source: "baidu", 
+        url: "https://pan.baidu.com/s/1qTfsucohZMjRLK8ruxz3Wg?pwd=2amh",
+        heat: 1,
+        views: 654
+    },
+    {
+        title: "微信好友管理",
+        description: "社交关系管理工具",
+        type: "tool",
+        size: "24MB",
+        source: "baidu",
+        url: "https://pan.baidu.com/s/1UCRFmWal288K6n6VTPE7Pw?pwd=2amh",
+        heat: 2,
+        views: 1876
+    },
+    {
+        title: "植物大战僵尸融合版",
+        description: "PC+安卓双版本",
+        type: "game",
+        size: "1.2GB",
+        source: "baidu",
+        url: "https://pan.baidu.com/s/1zHrUzGKAs8hUIO9YETdsAw?pwd=2amh",
+        heat: 3,
+        views: 4289,
+        trending: true
+    },
+    {
+        title: "PDF24工具箱",
+        description: "PDF处理全套工具",
+        type: "office",
+        size: "210MB",
+        source: "baidu",
+        url: "https://pan.baidu.com/s/1yGttsYhKQnKI-HiBy9ZErQ?pwd=2amh",
+        heat: 2,
+        views: 1678
+    },
+    {
+        title: "微软运行库合集",
+        description: "系统必备组件",
+        type: "system",
+        size: "210MB",
+        source: "baidu",
+        url: "https://pan.baidu.com/s/1Fl9TcE-mY9tZ1sa0xbN2lQ?pwd=2amh",
+        heat: 3,
+        views: 3987
+    },
+    {
+        title: "搜狗输入法",
+        description: "纯净无广告版",
+        type: "tool",
+        size: "78MB",
+        source: "baidu",
+        url: "https://pan.baidu.com/s/1BOKkBFzPg7xE1o9lf3aLhQ?pwd=2amh",
+        heat: 2,
+        views: 2876
+    },
+    {
+        title: "ES文件浏览器",
+        description: "高级文件管理工具",
+        type: "tool",
+        size: "32MB",
+        source: "baidu",
+        url: "https://pan.baidu.com/s/1fivfdNI65yUZmFKihZHU-A?pwd=2amh",
+        heat: 3,
+        views: 3245
+    },
+    {
+        title: "美图秀秀",
+        description: "去广告专业版",
+        type: "media",
+        size: "152MB",
+        source: "baidu",
+        url: "https://pan.baidu.com/s/1hMLtOMKXrvp6VdbviW3pLw?pwd=2amh",
+        heat: 2,
+        views: 2456
+    },
+    {
+        title: "剪映专业版",
+        description: "官方Win/Mac版",
+        type: "media",
+        size: "1.2GB",
+        source: "baidu",
+        url: "https://pan.baidu.com/s/14YYPZPyq4qiyTC27mdnLgw?pwd=2amh",
+        heat: 3,
+        views: 4876,
+        trending: true
+    },
+    {
+        title: "Affinity套件",
+        description: "专业设计软件合集",
+        type: "office",
+        size: "2.3GB",
+        source: "baidu",
+        url: "https://pan.baidu.com/s/176-WA_siXrIzYPMZ3CF0_w?pwd=2amh",
+        heat: 3,
+        views: 3124
+    },
+    {
+        title: "AUTOCAD全集",
+        description: "2025最新版本",
+        type: "office",
+        size: "3.5GB",
+        source: "baidu",
+        url: "https://pan.baidu.com/s/1BFfIFUvCOkqSJMgsilqiWw?pwd=2amh",
+        heat: 3,
+        views: 2987
+    },
+    {
+        title: "酷我音乐VIP版",
+        description: "无损音乐下载",
+        type: "media",
+        size: "152MB",
+        source: "baidu",
+        url: "https://pan.baidu.com/s/1JzWstQw1rZbd2pGKn_oDRg?pwd=2amh",
+        heat: 3,
+        views: 5876,
+        trending: true
+    },
+    {
+        title: "IDM下载器",
+        description: "极速下载工具",
+        type: "tool",
+        size: "12MB",
+        source: "baidu",
+        url: "https://pan.baidu.com/s/12cmxOidvkoXv05hnnMljmw?pwd=2amh",
+        heat: 3,
+        views: 4987
+    },
+    {
+        title: "Adobe全家桶2025",
+        description: "全套设计软件合集",
+        type: "office",
+        size: "36.7GB",
+        source: "baidu",
+        url: "https://pan.baidu.com/s/1-3hodv3e-SjNZXHTiuf-XQ?pwd=2amh",
+        heat: 3,
+        views: 6892,
+        trending: true
+    }
+];
+let currentSource = 'all';
+let searchText = '';
+
+function renderResources() {
+    const grid = document.getElementById('resourceGrid');
+    const filtered = resources.filter(item => {
+        const sourceMatch = currentSource === 'all' || item.source === currentSource;
+        const searchMatch = item.title.toLowerCase().includes(searchText) || 
+                          item.description.toLowerCase().includes(searchText);
+        return sourceMatch && searchMatch;
+    });
+    
+    grid.innerHTML = filtered.map(item => `
+        <div class="resource-card">
+            ${item.trending ? '<span class="trending-tag">HOT</span>' : ''}
+            <div class="hot-indicator">
+                ${Array.from({length: item.heat}, () => '🔥').join('')}
+            </div>
+            <h3>${item.title}</h3>
+            <p>${item.description}</p>
+            <div>
+                <span class="badge ${item.type}">${item.type.toUpperCase()}</span>
+                <span>${item.size}</span>
+            </div>
+            <div class="views-count">
+                👁️ ${formatNumber(item.views)}
+            </div>
+            <a href="${item.url}" class="download-btn" target="_blank">立即下载</a>
+        </div>
+    `).join('');
+
+    document.getElementById('count').textContent = filtered.length;
+}
+
+function formatNumber(num) {
+    return num > 999 ? (num/1000).toFixed(1) + 'k' : num;
+}
+
+// 平台切换
+document.querySelectorAll('.platform-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+        document.querySelectorAll('.platform-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        currentSource = tab.dataset.source;
+        renderResources();
+    });
+});
+
+// 搜索功能
+document.getElementById('searchInput').addEventListener('input', (e) => {
+    searchText = e.target.value.toLowerCase();
+    renderResources();
+});
+
+// 初始化
+renderResources();
+</script>
+</body>
+</html>
