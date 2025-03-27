@@ -3,538 +3,548 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>双平台破解软件资源大全｜2025最新夸克/百度网盘免费下载｜无需会员极速获取</title>
-     <meta name="description" content="【2025持续更新】全网最全破解版软件资源合集，覆盖办公/设计/影音/游戏等类别！支持夸克网盘与百度网盘双平台高速下载，无需会员即可享受极速传输。附详细安装教程及安全检测说明，资源稳定可用，限时免费领取！">
-    <meta name="keywords" content="破解版软件下载, 夸克网盘资源, 百度网盘分享, 免费软件合集, 双平台破解工具, 无需会员极速下载, 2023最新破解软件, 安全破解资源, 软件安装教程, 网盘资源大全">
+        <title>2025最新破解版合集：动漫/小说/听书/影视软件一键下载｜免费无广告｜全网最全</title>
+    <meta name="description" content="整合2025年全网热门破解软件资源，涵盖动漫追番（如Mi动漫）、小说阅读（番茄畅听）、有声书（我的听书）、影视追剧（蜂鸟追剧）等全类别。所有软件均提供免费无广告版本，支持实时更新与安全下载，附详细教程及书源导入指南。">
+    <meta name="keywords" content="2025破解版软件合集,免费动漫追番软件,小说听书神器,影视追剧无广告,听书软件书源导入,Mi动漫破解版,番茄畅听会员版,蜂鸟追剧资源">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root {
-            --primary-color: #4f46e5;
-            --background: #f8fafc;
-            --card-bg: #ffffff;
+        .category-pill { animation: float 3s ease-in-out infinite; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
         }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: var(--background);
-            margin: 0;
-            padding: 20px;
-            color: #1e293b;
+        .active-category {
+            background-color: #f0f4ff;
+            border-left: 4px solid #3b82f6;
         }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .platform-tabs {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-
-        .platform-tab {
-            padding: 12px 30px;
-            border-radius: 8px;
-            cursor: pointer;
-            background: #e0e7ff;
-            transition: all 0.3s;
-            border: 2px solid transparent;
-        }
-
-        .platform-tab.active {
-            background: var(--primary-color);
-            color: white;
-            border-color: #4338ca;
-        }
-
-        .header {
-            text-align: center;
-            padding: 40px 0;
-            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
-            color: white;
-            border-radius: 12px;
-            margin-bottom: 30px;
-        }
-
-        .search-box {
-            width: 100%;
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 15px;
-            border: none;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            font-size: 16px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .resource-card {
-            background: var(--card-bg);
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s;
-            position: relative;
-        }
-
-        .resource-card:hover {
-            transform: translateY(-2px);
-        }
-
-        /* 分类标签 */
-        .badge {
-            display: inline-block;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 12px;
-            margin-right: 8px;
-        }
-        .tool { background: #bfdbfe; color: #1e3a8a; }
-        .media { background: #fde68a; color: #78350f; }
-        .game { background: #bbf7d0; color: #166534; }
-        .system { background: #ddd6fe; color: #4338ca; }
-        .office { background: #fecaca; color: #7f1d1d; }
-
-        /* 热度系统 */
-        .hot-indicator {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            display: flex;
-            gap: 3px;
-        }
-        .heat-level-1 { color: #f59e0b; }
-        .heat-level-2 { color: #f97316; }
-        .heat-level-3 { color: #ef4444; }
-
-        .views-count {
-            position: absolute;
-            bottom: 15px;
-            right: 15px;
-            font-size: 12px;
-            color: #64748b;
-            display: flex;
-            align-items: center;
-            gap: 3px;
-        }
-
-        .trending-tag {
-            background: #ef4444;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 10px;
-            font-size: 12px;
-            position: absolute;
-            top: -8px;
-            right: -8px;
-        }
-
-        .download-btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 8px 20px;
-            background-color: var(--primary-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            transition: opacity 0.2s;
-        }
-
-        @media (max-width: 600px) {
-            .grid {
-                grid-template-columns: 1fr;
-            }
-            .platform-tabs {
-                flex-direction: column;
-            }
+        .hot-label {
+            background: linear-gradient(45deg, #ff6b6b, #ff3838);
+            box-shadow: 0 2px 8px rgba(255,107,107,0.3);
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>🔗 双平台资源合集</h1>
-            <p>已收录 <span id="count">0</span> 个精选资源</p>
-            <input type="text" 
-                   class="search-box" 
-                   placeholder="输入关键词搜索资源..." 
-                   id="searchInput">
+<body class="bg-gradient-to-br from-blue-50 to-purple-50">
+    <div class="container mx-auto px-4 py-8">
+        <!-- 头部区域 -->
+        <header class="text-center mb-12 bg-white rounded-2xl shadow-xl p-8">
+            <h1 class="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+                🎬 全领域资源终极合集
+            </h1>
+            <p class="text-xl text-gray-600 mb-6">更新至2025年3月27日 共收录1820部作品</p>
+            
+            <!-- 快速导航 -->
+     <div class="flex flex-wrap justify-center gap-4 mb-8">
+    <a href="https://pan.quark.cn/s/14446fd56cd0" 
+       class="category-pill px-6 py-2 bg-blue-100 text-blue-800 rounded-full hover:bg-blue-200 transition inline-flex items-center"
+       title="动漫软件合集">
+        <i class="fas fa-fire mr-2"></i>动漫软件合集
+    </a>
+    <a href="https://pan.quark.cn/s/39cc9023ce6c" 
+       class="category-pill px-6 py-2 bg-purple-100 text-purple-800 rounded-full hover:bg-purple-200 transition inline-flex items-center"
+       title="小说软件合集">
+        <i class="fas fa-award mr-2"></i>小说软件合集
+    </a>
+    <a href="https://pan.quark.cn/s/5e4377aebcb3" 
+       class="category-pill px-6 py-2 bg-purple-100 text-purple-800 rounded-full hover:bg-purple-200 transition inline-flex items-center"
+       title="听书软件合集">
+        <i class="fas fa-award mr-2"></i>听书软件合集
+    </a>
+</div>
+
+            <!-- 搜索框 -->
+            <div class="relative max-w-2xl mx-auto">
+                <input type="text" placeholder="搜索资源名称..." 
+                    class="w-full px-6 py-4 border-2 border-blue-200 rounded-full focus:ring-4 focus:ring-blue-300 transition">
+                <i class="fas fa-search absolute right-6 top-4 text-gray-400"></i>
+            </div>
+        </header>
+
+        <!-- 主内容区 -->
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- 侧边栏分类 -->
+            <div class="lg:col-span-1 bg-white rounded-xl shadow-lg p-6">
+                <h3 class="text-lg font-bold mb-4 flex items-center">
+                    <i class="fas fa-filter mr-2 text-blue-600"></i>
+                    资源分类
+                </h3>
+                <div class="space-y-4">
+                    <div class="category-tab cursor-pointer p-3 rounded-lg hover:bg-blue-50 transition active-category" 
+                         data-category="anime">
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium">🔥 热门动漫软件</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 rounded">13款</span>
+                        </div>
+                    </div>
+                    <div class="category-tab cursor-pointer p-3 rounded-lg hover:bg-blue-50 transition"
+                         data-category="novel">
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium">📚 小说软件</span>
+                            <span class="bg-purple-100 text-purple-800 px-2 rounded">28款</span>
+                        </div>
+                    </div>
+                    <div class="category-tab cursor-pointer p-3 rounded-lg hover:bg-blue-50 transition"
+                         data-category="listen">
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium">🎧 听说软件</span>
+                            <span class="bg-pink-100 text-pink-800 px-2 rounded">12款</span>
+                        </div>
+                    </div>
+                    <div class="category-tab cursor-pointer p-3 rounded-lg hover:bg-blue-50 transition"
+                         data-category="tech">
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium">💻 破解版软件</span>
+                            <span class="bg-green-100 text-green-800 px-2 rounded">10套</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 资源展示区 -->
+            <div class="lg:col-span-3">
+                <div id="softwareContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+            </div>
         </div>
 
-        <div class="platform-tabs">
-            <div class="platform-tab active" data-source="all">全部资源</div>
-            <div class="platform-tab" data-source="quark">夸克网盘</div>
-            <div class="platform-tab" data-source="baidu">百度网盘</div>
+        <!-- 使用提示 -->
+        <div class="bg-yellow-100 p-4 rounded-lg mt-8">
+            <p class="text-sm">⚠️ 资源获取提示：</p>
+            <ul class="list-disc pl-6 mt-2 text-gray-600">
+                <li>推荐使用夸克浏览器「秒传」功能批量转存</li>
+                <li>技术资料需解压密码可联系助理获取</li>
+                <li>建议开启VPN保障连接速度</li>
+            </ul>
         </div>
-
-        <div class="grid" id="resourceGrid"></div>
     </div>
 
-<script>
-const resources = [
-    // ================= 夸克网盘资源 =================
-    {
-        title: "夸克软件合集-3月",
-        description: "2024最新破解软件合集",
-        type: "tool",
-        size: "15.3GB",
-        source: "quark",
-        url: "https://pan.quark.cn/s/0490fbc3a871",
-        heat: 3,
-        views: 2845,
-        trending: true
-    },
+    <script>
+        // 分类数据（2025年3月终极版）
+        const softwareData = {
+            anime: [
+                {
+                    name: "动漫共和国",
+                    description: "全网独家签约80%国漫IP，含《灵笼2》超前点映",
+                    platforms: ["安卓", "iOS", "网页"],
+                    hotScore: 9.9,
+                    rating: 4.9,
+                    quarkLink: "https://pan.quark.cn/s/564a7b54f6f7"
+                },
+                {
+                    name: "囧次元-超清版",
+                    description: "支持8K HDR画质，与B站同步更新日漫新番",
+                    platforms: ["安卓", "iOS", "TV"],
+                    hotScore: 9.8,
+                    rating: 4.8,
+                    quarkLink: "https://pan.quark.cn/s/10cb0f1fcc0f"
+                },
+                {
+                    name: "AGE动漫Pro",
+                    description: "新番更新时间比日本电视台早30分钟",
+                    platforms: ["安卓", "iOS"],
+                    hotScore: 9.7,
+                    rating: 4.8,
+                    quarkLink: "https://pan.quark.cn/s/1e981065f2f1"
+                },
+                {
+                    name: "clicli动漫",
+                    description: "冷门神作覆盖率98%，含1960年代手绘动画修复版",
+                    platforms: ["安卓", "网页"],
+                    hotScore: 9.6,
+                    rating: 4.7,
+                    quarkLink: "https://pan.quark.cn/s/84418daf5d7e"
+                },
+                {
+                    name: "嘶哩嘶哩",
+                    description: "弹幕系统支持AI情绪分析，实时生成热词云",
+                    platforms: ["安卓"],
+                    hotScore: 9.5,
+                    rating: 4.7,
+                    quarkLink: "https://pan.quark.cn/s/b4682231d957"
+                },
+                {
+                    name: "Kazumi全平台",
+                    description: "5倍速播放不卡顿，司法考试用户首选工具",
+                    platforms: ["安卓", "电脑", "iOS"],
+                    hotScore: 9.3,
+                    rating: 4.6,
+                    quarkLink: "https://pan.quark.cn/s/b92d29a6e6c3"
+                },
+                {
+                    name: "稀饭动漫",
+                    description: "单机模式支持离线看500小时，极地科考队专用",
+                    platforms: ["安卓", "iOS"],
+                    hotScore: 9.2,
+                    rating: 4.6,
+                    quarkLink: "https://pan.quark.cn/s/707c1bf4e77c"
+                },
+                {
+                    name: "MiFun实验室版",
+                    description: "AI预测剧情功能准确率已达78%",
+                    platforms: ["安卓", "iOS", "网页"],
+                    hotScore: 9.1,
+                    rating: 4.5,
+                    quarkLink: "https://pan.quark.cn/s/bc58d0966f45"
+                },
+                {
+                    name: "橘漫",
+                    description: "女性向作品市占率91%，耽改剧审核未删减版",
+                    platforms: ["安卓"],
+                    hotScore: 8.9,
+                    rating: 4.4,
+                    quarkLink: "https://pan.quark.cn/s/db01831034ad"
+                },
+                {
+                    name: "oneAnime典藏版",
+                    description: "含吉卜力工作室全4K修复版独家授权",
+                    platforms: ["电脑", "手机"],
+                    hotScore: 8.8,
+                    rating: 4.4,
+                    quarkLink: "https://pan.quark.cn/s/60ad48b7453a"
+                },
+                {
+                    name: "Lanerc多源版",
+                    description: "自动切换22个区域节点，规避版权封锁",
+                    platforms: ["安卓", "iOS"],
+                    hotScore: 8.7,
+                    rating: 4.3,
+                    quarkLink: "https://pan.quark.cn/s/77ad009040f3"
+                },
+                {
+                    name: "黑白弹幕",
+                    description: "极客定制系统，支持代码级弹幕交互",
+                    platforms: ["安卓"],
+                    hotScore: 8.5,
+                    rating: 4.2,
+                    quarkLink: "https://pan.quark.cn/s/0d7f65fecf99"
+                },
+                {
+                    name: "Mi动漫",
+                    description: "老年模式字体放大300%，适老化改造标杆",
+                    platforms: ["安卓"],
+                    hotScore: 8.3,
+                    rating: 4.1,
+                    quarkLink: "https://pan.quark.cn/s/a136431334cc"
+                }
+            ],
+            
+            novel: [
+                {
+                    name: "番茄免费小说SVIP",
+                    description: "永久会员版，AI智能推荐算法",
+                    platforms: ["安卓"],
+                    hotScore: 9.8,
+                    rating: 4.9,
+                    quarkLink: "https://pan.quark.cn/s/63167d649546"
+                },
+                {
+                    name: "七猫小说终身会员版",
+                    description: "解锁全站资源，支持离线下载",
+                    platforms: ["安卓"],
+                    hotScore: 9.7,
+                    rating: 4.8,
+                    quarkLink: "https://pan.quark.cn/s/8b31d5aa8e2f"
+                },
+                {
+                    name: "猫番阅读全能版",
+                    description: "多源聚合搜索+漫画混合阅读",
+                    platforms: ["安卓"],
+                    hotScore: 9.6,
+                    rating: 4.7,
+                    quarkLink: "https://pan.quark.cn/s/b11c68e68686"
+                },
+                {
+                    name: "书海小说纯净版",
+                    description: "内置千书源无广告，支持TTS朗读",
+                    platforms: ["安卓"],
+                    hotScore: 9.4,
+                    rating: 4.7,
+                    quarkLink: "https://pan.quark.cn/s/b8f325921e3a"
+                },
+                {
+                    name: "快搜阅读器Pro",
+                    description: "全网秒级搜索，破解防盗链技术",
+                    platforms: ["安卓"],
+                    hotScore: 9.3,
+                    rating: 4.6,
+                    quarkLink: "https://pan.quark.cn/s/73e5c74c906a"
+                },
+                {
+                    name: "苍云阅读典藏版",
+                    description: "古籍善本数字化，含孤本资源",
+                    platforms: ["安卓"],
+                    hotScore: 9.1,
+                    rating: 4.5,
+                    quarkLink: "https://pan.quark.cn/s/1ffbb1f8810b"
+                },
+                {
+                    name: "东南小说会员版",
+                    description: "内置124个优质书源库",
+                    platforms: ["安卓"],
+                    hotScore: 9.0,
+                    rating: 4.5,
+                    quarkLink: "https://pan.quark.cn/s/88ef26e666c1"
+                },
+                {
+                    name: "笔趣阁橙色版",
+                    description: "破解敏感词过滤，显示完整内容",
+                    platforms: ["安卓"],
+                    hotScore: 8.9,
+                    rating: 4.4,
+                    quarkLink: "https://pan.quark.cn/s/68cc250217ee"
+                },
+                {
+                    name: "米禾阅读实验室版",
+                    description: "AI辅助写作功能测试版",
+                    platforms: ["安卓"],
+                    hotScore: 8.8,
+                    rating: 4.3,
+                    quarkLink: "https://pan.quark.cn/s/697374646687"
+                },
+                {
+                    name: "夜猫小说去广告版",
+                    description: "夜间模式护眼优化，支持语音朗读",
+                    platforms: ["安卓"],
+                    hotScore: 8.7,
+                    rating: 4.3,
+                    quarkLink: "https://pan.quark.cn/s/fc4060620888"
+                },
+                {
+                    name: "顶点小说纯净版",
+                    description: "支持EPUB/MOBI多格式导出",
+                    platforms: ["安卓"],
+                    hotScore: 8.6,
+                    rating: 4.2,
+                    quarkLink: "https://pan.quark.cn/s/657d1011bc8d"
+                },
+                {
+                    name: "全免小说会员版",
+                    description: "全站资源零广告，支持多设备同步",
+                    platforms: ["安卓"],
+                    hotScore: 8.5,
+                    rating: 4.2,
+                    quarkLink: "https://pan.quark.cn/s/72a5485c087d"
+                },
+                {
+                    name: "淘小说破解版",
+                    description: "解锁会员功能，支持批量下载",
+                    platforms: ["安卓"],
+                    hotScore: 8.4,
+                    rating: 4.1,
+                    quarkLink: "https://pan.quark.cn/s/6e3cdef4b1cc"
+                },
+                {
+                    name: "快搜小说极速版",
+                    description: "冷门小说覆盖率提升300%",
+                    platforms: ["安卓"],
+                    hotScore: 8.3,
+                    rating: 4.1,
+                    quarkLink: "https://pan.quark.cn/s/dc69b6df593d"
+                }
+            ],
 
-    // ================= 百度网盘完整资源 =================
-    {
-        title: "Speedtest测速工具",
-        description: "专业网络测速软件",
-        type: "tool",
-        size: "85MB",
-        source: "baidu",
-        url: "https://pan.baidu.com/s/1gnLXewUqMBBoV3iNiKfWTA?pwd=2amh",
-        heat: 2,
-        views: 1562
-    },
-    {
-        title: "AdGuard广告拦截器",
-        description: "全网广告拦截工具",
-        type: "tool", 
-        size: "62MB",
-        source: "baidu",
-        url: "https://pan.baidu.com/s/1oeX2jX8wy6zq4ujhUBmzoA?pwd=2amh",
-        heat: 3,
-        views: 2893
-    },
-    {
-        title: "BD-SJ10168",
-        description: "实用工具合集",
-        type: "tool",
-        size: "1.2GB",
-        source: "baidu",
-        url: "https://pan.baidu.com/s/1mGFScw938b4rd7VlbOoCvA?pwd=2amh",
-        heat: 1,
-        views: 876
-    },
-    {
-        title: "笔趣阁",
-        description: "小说阅读资源合集",
-        type: "reader",
-        size: "650MB", 
-        source: "baidu",
-        url: "https://pan.baidu.com/s/1gs6KyYV8hyzmNl36_6K-pQ?pwd=2amh",
-        heat: 2,
-        views: 2345
-    },
-    {
-        title: "BD-SJ10475",
-        description: "系统优化工具包",
-        type: "system",
-        size: "890MB",
-        source: "baidu",
-        url: "https://pan.baidu.com/s/1RYesg5KV0NwoEdbcNCjB5Q?pwd=2amh",
-        heat: 2,
-        views: 1678
-    },
-    {
-        title: "七猫小说",
-        description: "正版免费小说阅读",
-        type: "reader",
-        size: "78MB",
-        source: "baidu",
-        url: "https://pan.baidu.com/s/1mn8Kemjx6nkFaE-zyRtGdw?pwd=2amh",
-        heat: 3,
-        views: 3456
-    },
-    {
-        title: "万兴PDF专家",
-        description: "专业PDF处理工具",
-        type: "office",
-        size: "356MB",
-        source: "baidu",
-        url: "https://pan.baidu.com/s/1YWqFets8a0t7ZBmLo3u1kw?pwd=2amh",
-        heat: 2,
-        views: 1987
-    },
-    {
-        title: "yandex浏览器", 
-        description: "俄罗斯定制版浏览器",
-        type: "tool",
-        size: "92MB",
-        source: "baidu",
-        url: "https://pan.baidu.com/s/1cutI5la7AXyj8LK5QC02ZQ?pwd=2amh",
-        heat: 1,
-        views: 1324
-    },
-    {
-        title: "hwsmw",
-        description: "系统维护工具",
-        type: "system",
-        size: "45MB",
-        source: "baidu",
-        url: "https://pan.baidu.com/s/1zdSwXejGTaiKOUYluKLTtw?pwd=2amh",
-        heat: 1,
-        views: 987
-    },
-    {
-        title: "POTPLAYER播放器",
-        description: "4K高清播放器",
-        type: "media",
-        size: "45MB",
-        source: "baidu",
-        url: "https://pan.baidu.com/s/19R50iPPP-FuHeba8owPjzQ?pwd=2amh",
-        heat: 3,
-        views: 2876,
-        trending: true
-    },
-    {
-        title: "格式工厂", 
-        description: "万能格式转换工具",
-        type: "media",
-        size: "780MB",
-        source: "baidu",
-        url: "https://pan.baidu.com/s/1Jgj94HDVgPJ97rOheMU2Cw?pwd=2amh",
-        heat: 3,
-        views: 3245,
-        trending: true
-    },
-    {
-        title: "悦牍阅读器",
-        description: "内置海量书源",
-        type: "reader",
-        size: "32MB",
-        source: "baidu",
-        url: "https://pan.baidu.com/s/1fTuHGAN9Je2vRORhWZ0pLg?pwd=2amh",
-        heat: 2,
-        views: 2134
-    },
-    {
-        title: "MT管理器", 
-        description: "安卓逆向工具",
-        type: "tool",
-        size: "18MB",
-        source: "baidu",
-        url: "https://pan.baidu.com/s/1WuUHfWBTKOJ3jkWAugQo6w?pwd=2amh",
-        heat: 3,
-        views: 3876
-    },
-    {
-        title: "snipaste截图",
-        description: "专业截图工具",
-        type: "tool",
-        size: "15MB",
-        source: "baidu",
-        url: "https://pan.baidu.com/s/1yJfUAG6sP_6XxKOJXpyjyg?pwd=2amh",
-        heat: 2,
-        views: 2765
-    },
-    {
-        title: "litiaotiao",
-        description: "系统跳线工具",
-        type: "system",
-        size: "8MB",
-        source: "baidu", 
-        url: "https://pan.baidu.com/s/1qTfsucohZMjRLK8ruxz3Wg?pwd=2amh",
-        heat: 1,
-        views: 654
-    },
-    {
-        title: "微信好友管理",
-        description: "社交关系管理工具",
-        type: "tool",
-        size: "24MB",
-        source: "baidu",
-        url: "https://pan.baidu.com/s/1UCRFmWal288K6n6VTPE7Pw?pwd=2amh",
-        heat: 2,
-        views: 1876
-    },
-    {
-        title: "植物大战僵尸融合版",
-        description: "PC+安卓双版本",
-        type: "game",
-        size: "1.2GB",
-        source: "baidu",
-        url: "https://pan.baidu.com/s/1zHrUzGKAs8hUIO9YETdsAw?pwd=2amh",
-        heat: 3,
-        views: 4289,
-        trending: true
-    },
-    {
-        title: "PDF24工具箱",
-        description: "PDF处理全套工具",
-        type: "office",
-        size: "210MB",
-        source: "baidu",
-        url: "https://pan.baidu.com/s/1yGttsYhKQnKI-HiBy9ZErQ?pwd=2amh",
-        heat: 2,
-        views: 1678
-    },
-    {
-        title: "微软运行库合集",
-        description: "系统必备组件",
-        type: "system",
-        size: "210MB",
-        source: "baidu",
-        url: "https://pan.baidu.com/s/1Fl9TcE-mY9tZ1sa0xbN2lQ?pwd=2amh",
-        heat: 3,
-        views: 3987
-    },
-    {
-        title: "搜狗输入法",
-        description: "纯净无广告版",
-        type: "tool",
-        size: "78MB",
-        source: "baidu",
-        url: "https://pan.baidu.com/s/1BOKkBFzPg7xE1o9lf3aLhQ?pwd=2amh",
-        heat: 2,
-        views: 2876
-    },
-    {
-        title: "ES文件浏览器",
-        description: "高级文件管理工具",
-        type: "tool",
-        size: "32MB",
-        source: "baidu",
-        url: "https://pan.baidu.com/s/1fivfdNI65yUZmFKihZHU-A?pwd=2amh",
-        heat: 3,
-        views: 3245
-    },
-    {
-        title: "美图秀秀",
-        description: "去广告专业版",
-        type: "media",
-        size: "152MB",
-        source: "baidu",
-        url: "https://pan.baidu.com/s/1hMLtOMKXrvp6VdbviW3pLw?pwd=2amh",
-        heat: 2,
-        views: 2456
-    },
-    {
-        title: "剪映专业版",
-        description: "官方Win/Mac版",
-        type: "media",
-        size: "1.2GB",
-        source: "baidu",
-        url: "https://pan.baidu.com/s/14YYPZPyq4qiyTC27mdnLgw?pwd=2amh",
-        heat: 3,
-        views: 4876,
-        trending: true
-    },
-    {
-        title: "Affinity套件",
-        description: "专业设计软件合集",
-        type: "office",
-        size: "2.3GB",
-        source: "baidu",
-        url: "https://pan.baidu.com/s/176-WA_siXrIzYPMZ3CF0_w?pwd=2amh",
-        heat: 3,
-        views: 3124
-    },
-    {
-        title: "AUTOCAD全集",
-        description: "2025最新版本",
-        type: "office",
-        size: "3.5GB",
-        source: "baidu",
-        url: "https://pan.baidu.com/s/1BFfIFUvCOkqSJMgsilqiWw?pwd=2amh",
-        heat: 3,
-        views: 2987
-    },
-    {
-        title: "酷我音乐VIP版",
-        description: "无损音乐下载",
-        type: "media",
-        size: "152MB",
-        source: "baidu",
-        url: "https://pan.baidu.com/s/1JzWstQw1rZbd2pGKn_oDRg?pwd=2amh",
-        heat: 3,
-        views: 5876,
-        trending: true
-    },
-    {
-        title: "IDM下载器",
-        description: "极速下载工具",
-        type: "tool",
-        size: "12MB",
-        source: "baidu",
-        url: "https://pan.baidu.com/s/12cmxOidvkoXv05hnnMljmw?pwd=2amh",
-        heat: 3,
-        views: 4987
-    },
-    {
-        title: "Adobe全家桶2025",
-        description: "全套设计软件合集",
-        type: "office",
-        size: "36.7GB",
-        source: "baidu",
-        url: "https://pan.baidu.com/s/1-3hodv3e-SjNZXHTiuf-XQ?pwd=2amh",
-        heat: 3,
-        views: 6892,
-        trending: true
-    }
-];
-let currentSource = 'all';
-let searchText = '';
 
-function renderResources() {
-    const grid = document.getElementById('resourceGrid');
-    const filtered = resources.filter(item => {
-        const sourceMatch = currentSource === 'all' || item.source === currentSource;
-        const searchMatch = item.title.toLowerCase().includes(searchText) || 
-                          item.description.toLowerCase().includes(searchText);
-        return sourceMatch && searchMatch;
-    });
-    
-    grid.innerHTML = filtered.map(item => `
-        <div class="resource-card">
-            ${item.trending ? '<span class="trending-tag">HOT</span>' : ''}
-            <div class="hot-indicator">
-                ${Array.from({length: item.heat}, () => '🔥').join('')}
+            listen: [
+                {
+                    name: "唔语全平台听书",
+                    description: "iOS/安卓双端支持，无损音质+杜比全景声",
+                    platforms: ["安卓","iOS"],
+                    hotScore: 9.8,
+                    rating: 4.9,
+                    quarkLink: "https://pan.quark.cn/s/1dbb99e801b8"
+                },
+                {
+                    name: "昊昊听书VIP 4.0",
+                    description: "破解付费专辑+AI语音定制+3D环绕音效",
+                    platforms: ["安卓"],
+                    hotScore: 9.7,
+                    rating: 4.8,
+                    quarkLink: "https://pan.quark.cn/s/ff8c70650a19"
+                },
+                {
+                    name: "云动听书旗舰版",
+                    description: "千万级有声书库+语音弹幕互动",
+                    platforms: ["安卓"],
+                    hotScore: 9.5,
+                    rating: 4.7,
+                    quarkLink: "https://pan.quark.cn/s/0f41131ec6c1"
+                },
+                {
+                    name: "声阅AI 3.0",
+                    description: "多角色语音合成+方言定制",
+                    platforms: ["安卓"],
+                    hotScore: 9.4,
+                    rating: 4.7,
+                    quarkLink: "https://pan.quark.cn/s/54ba23e85a7d"
+                },
+                {
+                    name: "海豚之音Pro",
+                    description: "百万级专业播音员录制资源",
+                    platforms: ["安卓"],
+                    hotScore: 9.3,
+                    rating: 4.6,
+                    quarkLink: "https://pan.quark.cn/s/c19e6e90c2e5"
+                },
+                {
+                    name: "飞鸟听书终极版",
+                    description: "永久去广告+离线下载支持",
+                    platforms: ["安卓"],
+                    hotScore: 9.1,
+                    rating: 4.5,
+                    quarkLink: "https://pan.quark.cn/s/802e4ce15eb3"
+                },
+                {
+                    name: "荐音有声书库",
+                    description: "全网独家耽美有声剧资源",
+                    platforms: ["安卓"],
+                    hotScore: 8.9,
+                    rating: 4.4,
+                    quarkLink: "https://pan.quark.cn/s/bd89f731fae1"
+                },
+                {
+                    name: "玄幻阁听书版",
+                    description: "修真类专精+2倍速无损播放",
+                    platforms: ["安卓"],
+                    hotScore: 8.7,
+                    rating: 4.3,
+                    quarkLink: "https://pan.quark.cn/s/28e18a513f8e"
+                },
+                {
+                    name: "七猫听书破解版",
+                    description: "全站VIP解锁+后台播放",
+                    platforms: ["安卓"],
+                    hotScore: 8.6,
+                    rating: 4.2,
+                    quarkLink: "https://pan.quark.cn/s/8b31d5aa8e2f"
+                },
+                {
+                    name: "瓜子阅读听书版",
+                    description: "AI章节分割+睡眠定时",
+                    platforms: ["安卓"],
+                    hotScore: 8.5,
+                    rating: 4.1,
+                    quarkLink: "https://pan.quark.cn/s/8c36c8e398bb"
+                },
+                {
+                    name: "快搜听书引擎",
+                    description: "全网聚合+VIP破解",
+                    platforms: ["安卓"],
+                    hotScore: 8.3,
+                    rating: 4.0,
+                    quarkLink: "https://pan.quark.cn/s/dc69b6df593d"
+                },
+                {
+                    name: "猫番听书版",
+                    description: "多源聚合+定时关闭",
+                    platforms: ["安卓"],
+                    hotScore: 8.2,
+                    rating: 3.9,
+                    quarkLink: "https://pan.quark.cn/s/7d278d2134c6"
+                }
+            ],
+
+            tech: [ {
+            name: "剪映专业版教程合集",
+            description: "含高级剪辑技巧+特效制作实战（含2025版新功能）",
+            platforms: ["视频教程","模板素材"],
+            hotScore: 9.7,
+            rating: 4.8,
+            quarkLink: "https://pan.quark.cn/s/05a9be78d6d8",
+            tag: ["影视制作","新手入门"]
+        },
+        {
+            name: "全平台VIP解锁工具",
+            description: "支持主流视频平台会员特权破解（2025稳定版）",
+            platforms: ["Windows","MacOS"],
+            hotScore: 9.6,
+            rating: 4.7,
+            quarkLink: "https://pan.quark.cn/s/bb497a57db9e",
+            warning: "需关闭杀毒软件使用",
+            tag: ["效率工具"]
+        },
+        {
+            name: "百度网盘极速下载方案",
+            description: "突破100M/s限速+自动跳过敏感检测（含图文/视频教程）",
+            platforms: ["Windows客户端","浏览器插件"],
+            hotScore: 9.8,
+            rating: 4.9,
+            quarkLink: "https://pan.quark.cn/s/720b45ac1fab",
+            tag: ["网络优化","必备工具"]
+        }]
+        };
+
+        // 渲染函数
+        function renderSoftwareCards(data) {
+            return data.map((item, index) => `
+                <div class="software-card bg-white rounded-lg shadow-md p-6 hover:shadow-xl relative transition-transform duration-300 hover:-translate-y-1">
+                    ${index < 3 ? `
+                        <div class="hot-label absolute top-2 right-2 text-white text-xs px-2 py-1 rounded">
+                            TOP${index + 1}
+                        </div>
+                    ` : ''}
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-bold text-blue-600">${item.name}</h2>
+                        <div class="flex items-center text-orange-500">
+                            <i class="fas fa-bolt mr-1"></i>
+                            <span class="font-mono">${item.hotScore}</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4 leading-relaxed">${item.description}</p>
+                    <div class="mb-4 flex items-center">
+                        <span class="font-semibold mr-2">支持平台：</span>
+                        ${item.platforms.map(p => `<span class="px-2 py-1 bg-gray-100 rounded mr-2 text-sm">${p}</span>`).join('')}
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center">
+                            <div class="rate-stars text-yellow-400">
+                                ${Array(Math.floor(item.rating)).fill('<i class="fas fa-star"></i>').join('')}
+                            </div>
+                            <span class="text-gray-500 ml-2">${item.rating}</span>
+                        </div>
+                        <a href="${item.quarkLink}" target="_blank" 
+                            class="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity">
+                            极速转存
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 分类切换功能
+        document.querySelectorAll('.category-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active-category'));
+                this.classList.add('active-category');
+                const category = this.dataset.category;
+                document.getElementById('softwareContainer').innerHTML = renderSoftwareCards(softwareData[category]);
+            });
+        });
+
+        // 初始化显示动漫资源
+        document.getElementById('softwareContainer').innerHTML = renderSoftwareCards(softwareData.anime);
+    </script>
+       <div class="container mx-auto px-4 mt-10 bg-white p-6 rounded-lg shadow-md">
+    <h2 class="text-2xl font-bold text-blue-600 mb-4">资源互动区</h2>
+    <div class="text-center mt-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto">
+                <h2 class="text-3xl font-bold text-blue-600 mb-6">🎉 超值资源大礼包</h2>
+                <p class="text-gray-700 mb-6">
+                    限时福利：关注公众号【软件挖掘机】，获取更多独家资源和最新动漫软件推荐！
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <a 
+                        href="https://pan.quark.cn/s/99ca5186aac2" 
+                        class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-full text-lg font-bold hover:from-blue-600 hover:to-purple-700 transition duration-300 animate-pulse-soft"
+                    >
+                        🔥 立即获取资源合集
+                    </a>
+                </div>
             </div>
-            <h3>${item.title}</h3>
-            <p>${item.description}</p>
-            <div>
-                <span class="badge ${item.type}">${item.type.toUpperCase()}</span>
-                <span>${item.size}</span>
-            </div>
-            <div class="views-count">
-                👁️ ${formatNumber(item.views)}
-            </div>
-            <a href="${item.url}" class="download-btn" target="_blank">立即下载</a>
         </div>
-    `).join('');
 
-    document.getElementById('count').textContent = filtered.length;
-}
-
-function formatNumber(num) {
-    return num > 999 ? (num/1000).toFixed(1) + 'k' : num;
-}
-
-// 平台切换
-document.querySelectorAll('.platform-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-        document.querySelectorAll('.platform-tab').forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-        currentSource = tab.dataset.source;
-        renderResources();
-    });
-});
-
-// 搜索功能
-document.getElementById('searchInput').addEventListener('input', (e) => {
-    searchText = e.target.value.toLowerCase();
-    renderResources();
-});
-
-// 初始化
-renderResources();
-</script>
+        <footer class="text-center mt-12 text-gray-500">
+            <p>© 2025 软件资源平台 | 夸克网盘独家资源</p>
+            <p class="text-sm mt-2">资源仅供学习交流，请在24小时内删除</p>
+        </footer>
+    </div>
 </body>
 </html>
