@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>2025最新破解版合集：动漫/小说/听书/影视软件一键下载｜免费无广告｜全网最全</title>
+         <title>2025最新破解版合集：动漫/小说/听书/影视软件一键下载｜免费无广告｜全网最全</title>
     <meta name="description" content="整合2025年全网热门破解软件资源，涵盖动漫追番（如Mi动漫）、小说阅读（番茄畅听）、有声书（我的听书）、影视追剧（蜂鸟追剧）等全类别。所有软件均提供免费无广告版本，支持实时更新与安全下载，附详细教程及书源导入指南。">
     <meta name="keywords" content="2025破解版软件合集,免费动漫追番软件,小说听书神器,影视追剧无广告,听书软件书源导入,Mi动漫破解版,番茄畅听会员版,蜂鸟追剧资源">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -22,11 +22,21 @@
             background: linear-gradient(45deg, #ff6b6b, #ff3838);
             box-shadow: 0 2px 8px rgba(255,107,107,0.3);
         }
+.bg-yellow-100 {
+  border-left: 4px solid #f59e0b; /* 与侧边栏active状态对齐 */
+  @apply transition-colors duration-300 hover:bg-yellow-50; /* 悬停反馈 */
+}
+.bg-yellow-100 {
+    transition: box-shadow 0.3s ease;
+}
+
+.bg-yellow-100:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
     </style>
 </head>
 <body class="bg-gradient-to-br from-blue-50 to-purple-50">
     <div class="container mx-auto px-4 py-8">
-        <!-- 头部区域 -->
         <header class="text-center mb-12 bg-white rounded-2xl shadow-xl p-8">
             <h1 class="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
                 🎬 全领域资源终极合集
@@ -34,29 +44,34 @@
             <p class="text-xl text-gray-600 mb-6">更新至2025年3月27日 共收录1820部作品</p>
             
             <!-- 快速导航 -->
-     <div class="flex flex-wrap justify-center gap-4 mb-8">
-    <a href="https://pan.quark.cn/s/14446fd56cd0" 
-       class="category-pill px-6 py-2 bg-blue-100 text-blue-800 rounded-full hover:bg-blue-200 transition inline-flex items-center"
-       title="动漫软件合集">
-        <i class="fas fa-fire mr-2"></i>动漫软件合集
-    </a>
-    <a href="https://pan.quark.cn/s/39cc9023ce6c" 
-       class="category-pill px-6 py-2 bg-purple-100 text-purple-800 rounded-full hover:bg-purple-200 transition inline-flex items-center"
-       title="小说软件合集">
-        <i class="fas fa-award mr-2"></i>小说软件合集
-    </a>
-    <a href="https://pan.quark.cn/s/5e4377aebcb3" 
-       class="category-pill px-6 py-2 bg-purple-100 text-purple-800 rounded-full hover:bg-purple-200 transition inline-flex items-center"
-       title="听书软件合集">
-        <i class="fas fa-award mr-2"></i>听书软件合集
-    </a>
-</div>
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <a href="javascript:void(0);" 
+                   class="category-pill px-6 py-2 bg-blue-100 text-blue-800 rounded-full hover:bg-blue-200 transition inline-flex items-center"
+                   data-category="popular">
+                    <i class="fas fa-fire mr-2"></i>热门软件合集
+                </a>
+                <a href="javascript:void(0);" 
+                   class="category-pill px-6 py-2 bg-purple-100 text-purple-800 rounded-full hover:bg-purple-200 transition inline-flex items-center"
+                   data-category="anime">
+                    <i class="fas fa-award mr-2"></i>动漫软件合集
+                </a>
+                <a href="javascript:void(0);" 
+                   class="category-pill px-6 py-2 bg-purple-100 text-purple-800 rounded-full hover:bg-purple-200 transition inline-flex items-center"
+                   data-category="novel">
+                    <i class="fas fa-award mr-2"></i>小说软件合集
+                </a>
+                <a href="javascript:void(0);" 
+                   class="category-pill px-6 py-2 bg-purple-100 text-purple-800 rounded-full hover:bg-purple-200 transition inline-flex items-center"
+                   data-category="listen">
+                    <i class="fas fa-award mr-2"></i>听书软件合集
+                </a>
+            </div>
 
             <!-- 搜索框 -->
             <div class="relative max-w-2xl mx-auto">
-                <input type="text" placeholder="搜索资源名称..." 
+                <input id="searchInput" type="text" placeholder="搜索资源名称..." 
                     class="w-full px-6 py-4 border-2 border-blue-200 rounded-full focus:ring-4 focus:ring-blue-300 transition">
-                <i class="fas fa-search absolute right-6 top-4 text-gray-400"></i>
+                <i class="fas fa-search absolute right-6 top-4 text-gray-400" style="cursor: pointer;"></i>
             </div>
         </header>
 
@@ -69,10 +84,17 @@
                     资源分类
                 </h3>
                 <div class="space-y-4">
-                    <div class="category-tab cursor-pointer p-3 rounded-lg hover:bg-blue-50 transition active-category" 
+                    <div class="category-tab cursor-pointer p-3 rounded-lg hover:bg-blue-50 transition" 
+                         data-category="popular">
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium">🔥 热门软件</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 rounded">13款</span>
+                        </div>
+                    </div>
+                    <div class="category-tab cursor-pointer p-3 rounded-lg hover:bg-blue-50 transition" 
                          data-category="anime">
                         <div class="flex justify-between items-center">
-                            <span class="font-medium">🔥 热门动漫软件</span>
+                            <span class="font-medium">🔥 动漫软件</span>
                             <span class="bg-blue-100 text-blue-800 px-2 rounded">13款</span>
                         </div>
                     </div>
@@ -86,15 +108,8 @@
                     <div class="category-tab cursor-pointer p-3 rounded-lg hover:bg-blue-50 transition"
                          data-category="listen">
                         <div class="flex justify-between items-center">
-                            <span class="font-medium">🎧 听说软件</span>
+                            <span class="font-medium">🎧 听书软件</span>
                             <span class="bg-pink-100 text-pink-800 px-2 rounded">12款</span>
-                        </div>
-                    </div>
-                    <div class="category-tab cursor-pointer p-3 rounded-lg hover:bg-blue-50 transition"
-                         data-category="tech">
-                        <div class="flex justify-between items-center">
-                            <span class="font-medium">💻 破解版软件</span>
-                            <span class="bg-green-100 text-green-800 px-2 rounded">10套</span>
                         </div>
                     </div>
                 </div>
@@ -105,20 +120,87 @@
                 <div id="softwareContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
             </div>
         </div>
-
-        <!-- 使用提示 -->
-        <div class="bg-yellow-100 p-4 rounded-lg mt-8">
-            <p class="text-sm">⚠️ 资源获取提示：</p>
-            <ul class="list-disc pl-6 mt-2 text-gray-600">
-                <li>推荐使用手机端夸克批量转存，手机端首次转存可获得1TB容量</li>
-            </ul>
-        </div>
     </div>
 
+
     <script>
-        // 分类数据（2025年3月终极版）
         const softwareData = {
-            anime: [
+           popular: [
+                  {
+                    name: "李跳跳",
+                    description: "开屏广告屏蔽工具",
+                    platforms: ["安卓", "iOS", "Windows"],
+                    hotScore: 9.8,
+                    rating: 4.9,
+                    quarkLink: "https://pan.quark.cn/s/bcf553b00268"
+                },
+ {
+                    name: "VIP（1）软件",
+                    description: "解锁各大平台VIP特权",
+                    platforms: ["Windows", "MacOS"],
+                    hotScore: 9.9,
+                    rating: 4.8,
+                    quarkLink: "https://pan.quark.cn/s/bb497a57db9e"
+                },
+{
+                    name: "图吧工具箱",
+                    description: "全能工具箱，支持多种实用功能",
+                    platforms: ["安卓", "iOS", "Windows"],
+                    hotScore: 9.8,
+                    rating: 4.8,
+                    quarkLink: "https://pan.quark.cn/s/bcf553b00268"
+                },
+                {
+                    name: "迅雷破解版",
+                    description: "永久VIP，搜索【努力搬砖】获取资源包",
+                    platforms: ["Windows", "MacOS", "安卓"],
+                    hotScore: 9.7,
+                    rating: 4.7,
+                    quarkLink: "https://pan.quark.cn/s/4580456b9bc6"
+                },
+                {
+                    name: "去水印工具",
+                    description: "一键去除图片视频水印",
+                    platforms: ["Windows", "MacOS", "Web"],
+                    hotScore: 9.5,
+                    rating: 4.6,
+                    quarkLink: "https://pan.quark.cn/s/1100632f35e3"
+                },
+                {
+                    name: "樱花校园模拟器.apk",
+                    description: "全功能校园模拟器",
+                    platforms: ["安卓"],
+                    hotScore: 9.6,
+                    rating: 4.7,
+                    quarkLink: "https://pan.quark.cn/s/5a4c465e39b2"
+                },
+                {
+                    name: "听书软件",
+                    description: "全网听书神器，支持多平台同步",
+                    platforms: ["安卓", "iOS"],
+                    hotScore: 9.4,
+                    rating: 4.5,
+                    quarkLink: "https://pan.quark.cn/s/5e4377aebcb3"
+                },
+                {
+                    name: "小说软件App合集【定期更新】",
+                    description: "各类小说APP的合集，定期更新",
+                    platforms: ["安卓", "iOS"],
+                    hotScore: 9.6,
+                    rating: 4.7,
+                    quarkLink: "https://pan.quark.cn/s/39cc9023ce6c"
+                },
+                {
+                    name: "动漫软件合集",
+                    description: "热门动漫软件合集，支持各大平台",
+                    platforms: ["安卓", "iOS", "Windows"],
+                    hotScore: 9.7,
+                    rating: 4.8,
+                    quarkLink: "https://pan.quark.cn/s/14446fd56cd0"
+                },
+               
+            ],
+        anime: [
                 {
                     name: "动漫共和国",
                     description: "全网独家签约80%国漫IP，含《灵笼2》超前点映",
@@ -469,9 +551,26 @@
             tag: ["网络优化","必备工具"]
         }]
         };
+ 
 
-        // 渲染函数
-        function renderSoftwareCards(data) {
+
+        let currentCategory = 'popular'; // 默认显示热门软件
+
+        // 分类切换
+        document.querySelectorAll('.category-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                currentCategory = this.dataset.category;
+                renderSoftwareContent(currentCategory);
+            });
+        });
+
+        // 渲染某个分类的内容
+        function renderSoftwareContent(category) {
+            document.getElementById('softwareContainer').innerHTML = renderSoftwareCards(softwareData[category]);
+        }
+
+        // 渲染分类内容
+     function renderSoftwareCards(data) {
             return data.map((item, index) => `
                 <div class="software-card bg-white rounded-lg shadow-md p-6 hover:shadow-xl relative transition-transform duration-300 hover:-translate-y-1">
                     ${index < 3 ? `
@@ -480,7 +579,9 @@
                         </div>
                     ` : ''}
                     <div class="flex justify-between items-center mb-4">
-                        <h2 class="text-xl font-bold text-blue-600">${item.name}</h2>
+                        <div>
+                            <h2 class="text-xl font-bold text-blue-600">${item.name}</h2>
+                        </div>
                         <div class="flex items-center text-orange-500">
                             <i class="fas fa-bolt mr-1"></i>
                             <span class="font-mono">${item.hotScore}</span>
@@ -507,20 +608,114 @@
             `).join('');
         }
 
-        // 分类切换功能
-        document.querySelectorAll('.category-tab').forEach(tab => {
-            tab.addEventListener('click', function() {
-                document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active-category'));
-                this.classList.add('active-category');
-                const category = this.dataset.category;
-                document.getElementById('softwareContainer').innerHTML = renderSoftwareCards(softwareData[category]);
-            });
-        });
+        // 全局搜索功能
+        function performSearch() {
+            const searchTerm = document.getElementById('searchInput').value.trim().toLowerCase();
+            
+            if (searchTerm === '') {
+                renderSoftwareContent(currentCategory);
+                return;
+            }
 
-        // 初始化显示动漫资源
-        document.getElementById('softwareContainer').innerHTML = renderSoftwareCards(softwareData.anime);
+            let allResults = [];
+
+            // 搜索所有分类
+            for (const category in softwareData) {
+                const categoryResults = softwareData[category].filter(item => {
+                    return (
+                        item.name.toLowerCase().includes(searchTerm) ||
+                        item.description.toLowerCase().includes(searchTerm) ||
+                        item.platforms.some(platform => platform.toLowerCase().includes(searchTerm))
+                    );
+                });
+                allResults = [...allResults, ...categoryResults];
+            }
+
+            // 按热度排序
+            allResults.sort((a, b) => b.hotScore - a.hotScore);
+            
+            if (allResults.length > 0) {
+                document.getElementById('softwareContainer').innerHTML = renderSearchResults(allResults);
+            } else {
+                document.getElementById('softwareContainer').innerHTML = `
+
+                    <div class="col-span-3 text-center py-12">
+                        <div class="text-gray-400 text-6xl mb-4">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-600 mb-2">未找到"${searchTerm}"相关资源</h3>
+                        <p class="text-gray-500">请尝试其他关键词</p>
+                    </div>
+                `;
+            }
+        }
+
+        // 搜索结果渲染
+        function renderSearchResults(results) {
+            return results.map(item => `
+                <div class="software-card bg-white rounded-lg shadow-md p-6 hover:shadow-xl relative transition-transform duration-300 hover:-translate-y-1">
+                    <div class="flex justify-between items-center mb-4">
+                        <div>
+                            <h2 class="text-xl font-bold text-blue-600">${item.name}</h2>
+                        </div>
+                        <div class="flex items-center text-orange-500">
+                            <i class="fas fa-bolt mr-1"></i>
+                            <span class="font-mono">${item.hotScore}</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4 leading-relaxed">${item.description}</p>
+                    <div class="mb-4 flex items-center">
+                        <span class="font-semibold mr-2">支持平台：</span>
+                        ${item.platforms.map(p => `<span class="px-2 py-1 bg-gray-100 rounded mr-2 text-sm">${p}</span>`).join('')}
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <a href="${item.quarkLink}" target="_blank" 
+                            class="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-lg hover:opacity-90 transition-opacity">
+                            极速转存
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 初始化页面内容（默认显示热门软件）
+        renderSoftwareContent(currentCategory);
+
+        // 监听搜索框变化
+        document.getElementById('searchInput').addEventListener('input', performSearch);
     </script>
-       <div class="container mx-auto px-4 mt-10 bg-white p-6 rounded-lg shadow-md">
+
+ 
+<!-- 修改后的提示区块 -->
+<div class="lg:col-span-3">
+    <!-- 精确匹配卡片容器参数 -->
+    <div class="max-w-[calc(100vw-2rem)] lg:max-w-[calc(83.333%-2rem)] mx-auto"> 
+        <div class="bg-yellow-100 p-6 rounded-lg shadow-sm 
+                   border-l-4 border-yellow-400
+                   hover:shadow-md transition-all">
+            <div class="flex items-start gap-4">
+                <i class="fas fa-info-circle text-yellow-600 mt-1"></i>
+                <div>
+                    <p class="text-sm font-semibold text-yellow-800 mb-2">
+                        资源获取提示：
+                    </p>
+                    <ul class="list-disc pl-6 space-y-1">
+                        <li class="text-gray-700 text-sm leading-relaxed">
+                            推荐使用手机端夸克批量转存，手机端首次转存可获得
+                            <span class="font-semibold text-yellow-700">1TB容量</span>
+                        </li>
+                      <li class="text-gray-700 text-sm leading-relaxed">
+                            如需迅雷网盘相关资源，可在手机端迅雷网盘搜索：
+                            <span class="font-semibold text-yellow-700">努力搬砖</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+      <div class="container mx-auto px-4 mt-10 bg-white p-6 rounded-lg shadow-md">
     <h2 class="text-2xl font-bold text-blue-600 mb-4">资源互动区</h2>
     <div class="text-center mt-12">
             <div class="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto">
@@ -535,12 +730,17 @@
                     >
                         🔥 立即获取资源合集
                     </a>
+                    <a 
+                        href="https://pan.xunlei.com/s/VOMk-4xW44iyirTJ9SroxfbKA1?pwd=scma" 
+                        class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-full text-lg font-bold hover:from-blue-600 hover:to-purple-700 transition duration-300 animate-pulse-soft"
+                    >
+                        🔥迅雷网盘资源合集
+                    </a>
                 </div>
             </div>
         </div>
 
         <footer class="text-center mt-12 text-gray-500">
-            <p>© 2025 软件资源平台 | 夸克网盘独家资源</p>
             <p class="text-sm mt-2">资源仅供学习交流，请在24小时内删除</p>
         </footer>
     </div>
